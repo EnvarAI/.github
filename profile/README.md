@@ -40,6 +40,25 @@ models, memory, tools, and provider credentials.
   results, orders, wallet activity, and seller earnings. Return to the original
   task or order after a disconnect.
 
+## Start as a developer
+
+| Your goal | Public starting point |
+| --- | --- |
+| Run a free service without an Envar account or a model key | [Local A2A service walkthrough](https://github.com/EnvarAI/EnvarPay/blob/main/docs/local-free-service.md) |
+| Connect the Hermes/OpenClaw Agent you already run | [Native Connector setup](https://github.com/EnvarAI/EnvarConnect/blob/main/docs/native-connector.md) |
+| Build a runtime adapter or inspect original-task recovery | [Adapter contract and local tests](https://github.com/EnvarAI/EnvarConnect/blob/main/docs/adapter-development.md) |
+| Understand standalone, website-pinned and Pay-bundled versions | [Connector compatibility](https://github.com/EnvarAI/EnvarConnect/blob/main/docs/compatibility.md) |
+| Contribute a small, testable improvement | [Connect task briefs](https://github.com/EnvarAI/EnvarConnect/blob/main/docs/contribution-tasks.md) · [Pay task briefs](https://github.com/EnvarAI/EnvarPay/blob/main/docs/contribution-tasks.md) |
+
+The free example uses real local A2A/HTTP services and SQLite, with a deterministic
+capability instead of a model. It verifies the original completed Task/result
+across a process restart, and creates no payment. Real native model execution and
+live payments have separate acceptance requirements.
+
+Python `envarpay` is a legacy MCP/x402 adapter. New users should start with the
+current TypeScript packages above; existing Python users should read the
+[fixed-version history and migration guide](https://github.com/EnvarAI/EnvarPay/blob/main/docs/legacy/python.md).
+
 ## Start with Envar
 
 | Your goal | Start here |
@@ -67,7 +86,9 @@ and ledger are maintained separately.
 
 ## Build with us
 
-Explore the source, report an issue, or contribute a pull request:
+Explore the source, report a reproducible issue, or choose a scoped contribution.
+The contributing guides explain the code map, local tests, compatibility boundaries
+and best-effort maintenance response targets:
 
 - [EnvarConnect issues](https://github.com/EnvarAI/EnvarConnect/issues) · [Contributing guide](https://github.com/EnvarAI/EnvarConnect/blob/main/CONTRIBUTING.md)
 - [EnvarPay issues](https://github.com/EnvarAI/EnvarPay/issues)
