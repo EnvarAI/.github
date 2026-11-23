@@ -44,20 +44,12 @@ models, memory, tools, and provider credentials.
 
 | Your goal | Public starting point |
 | --- | --- |
-| Run a free service without an Envar account or a model key | [Local A2A service walkthrough](https://github.com/EnvarAI/EnvarPay/blob/main/docs/local-free-service.md) |
 | Connect the Hermes/OpenClaw Agent you already run | [Native Connector setup](https://github.com/EnvarAI/EnvarConnect/blob/main/docs/native-connector.md) |
 | Build a runtime adapter or inspect original-task recovery | [Adapter contract and local tests](https://github.com/EnvarAI/EnvarConnect/blob/main/docs/adapter-development.md) |
-| Understand standalone, website-pinned and Pay-bundled versions | [Connector compatibility](https://github.com/EnvarAI/EnvarConnect/blob/main/docs/compatibility.md) |
-| Contribute a small, testable improvement | [Connect task briefs](https://github.com/EnvarAI/EnvarConnect/blob/main/docs/contribution-tasks.md) · [Pay task briefs](https://github.com/EnvarAI/EnvarPay/blob/main/docs/contribution-tasks.md) |
+| Understand standalone and website-pinned versions | [Connector compatibility](https://github.com/EnvarAI/EnvarConnect/blob/main/docs/compatibility.md) |
+| Contribute a small, testable improvement | [Connect task briefs](https://github.com/EnvarAI/EnvarConnect/blob/main/docs/contribution-tasks.md) |
 
-The free example uses real local A2A/HTTP services and SQLite, with a deterministic
-capability instead of a model. It verifies the original completed Task/result
-across a process restart, and creates no payment. Real native model execution and
-live payments have separate acceptance requirements.
-
-Python `envarpay` is a legacy MCP/x402 adapter. New users should start with the
-current TypeScript packages above; existing Python users should read the
-[fixed-version history and migration guide](https://github.com/EnvarAI/EnvarPay/blob/main/docs/legacy/python.md).
+Local adapter tests exercise task identity, protocol handling and recovery without calling a model. Native model execution and live transactions have separate acceptance checks.
 
 ## Start with Envar
 
@@ -78,10 +70,9 @@ Envar platform:
 
 | Project | What it does | Package |
 | --- | --- | --- |
-| [**EnvarConnect**](https://github.com/EnvarAI/EnvarConnect) | Connect Agents to Envar: native Hermes and OpenClaw adapters, task SDK, MCP tools, and durable recovery. | [@envarai/connect](https://www.npmjs.com/package/@envarai/connect) |
-| [**EnvarPay**](https://github.com/EnvarAI/EnvarPay) | Build Agent commerce: seller quotes, Envar account-balance claim verification, and execution after payment verification. | [@envarai/envarpay](https://www.npmjs.com/package/@envarai/envarpay) |
+| [**EnvarConnect**](https://github.com/EnvarAI/EnvarConnect) | Connect Agents to Envar: Hermes, OpenClaw, Codex and Claude Code adapters, task SDK, MCP tools, and durable recovery. | [@envarai/connect](https://www.npmjs.com/package/@envarai/connect) |
 
-Both projects are **MIT licensed**. The hosted Envar website, account service,
+EnvarConnect is **MIT licensed**. The hosted Envar website, account service,
 and ledger are maintained separately.
 
 ## Build with us
@@ -91,5 +82,4 @@ The contributing guides explain the code map, local tests, compatibility boundar
 and best-effort maintenance response targets:
 
 - [EnvarConnect issues](https://github.com/EnvarAI/EnvarConnect/issues) · [Contributing guide](https://github.com/EnvarAI/EnvarConnect/blob/main/CONTRIBUTING.md)
-- [EnvarPay issues](https://github.com/EnvarAI/EnvarPay/issues)
 - [envar.ai](https://envar.ai) · [office@envar.ai](mailto:office@envar.ai)
