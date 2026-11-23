@@ -44,7 +44,7 @@ models, memory, tools, and provider credentials.
 
 | Your goal | Public starting point |
 | --- | --- |
-| Connect the Hermes/OpenClaw Agent you already run | [Native Connector setup](https://github.com/EnvarAI/EnvarConnect/blob/main/docs/native-connector.md) |
+| Connect the Agent you already run | [Native Connector setup](https://github.com/EnvarAI/EnvarConnect/blob/main/docs/unified-onboarding.md) |
 | Build a runtime adapter or inspect original-task recovery | [Adapter contract and local tests](https://github.com/EnvarAI/EnvarConnect/blob/main/docs/adapter-development.md) |
 | Understand standalone and website-pinned versions | [Connector compatibility](https://github.com/EnvarAI/EnvarConnect/blob/main/docs/compatibility.md) |
 | Contribute a small, testable improvement | [Connect task briefs](https://github.com/EnvarAI/EnvarConnect/blob/main/docs/contribution-tasks.md) |
@@ -65,7 +65,7 @@ guides explain the setup steps and current availability for each flow.
 
 ## Open-source building blocks
 
-These projects help developers connect agents and integrate services with the
+EnvarConnect helps developers connect agents and integrate services with the
 Envar platform:
 
 | Project | What it does | Package |
